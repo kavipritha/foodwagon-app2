@@ -64,7 +64,12 @@ div {
     --bs-gutter-x: 0.5rem;
 }
 
-
+.card-actions {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
 
 
 .card-span {
@@ -113,5 +118,17 @@ a {
     color: #212121;
     text-decoration: none;
 }
-
+.bg-primary {
+    background-color: #FFB30E !important;
+}
+.p-4 {
+    padding: 1.8rem !important;
+}
+.badge {
+    line-height: 0.8125rem;
+}
+.text-danger {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-danger-rgb),var(--bs-text-opacity))!important;
+}
 }

@@ -1,9 +1,7 @@
 import React from "react";
 import './deals.scss';
-
 import Deal from '../deal/deal';
 import dealsData from '../../data/deals'
-import discountItem1 from '../../static/images/discount-item-1.png'
 
 class Deals extends React.Component {
   render() {
@@ -11,7 +9,7 @@ class Deals extends React.Component {
       <div className="deals">
         <section className="py-0">
           <div className="container">
-            <div className="row h-100 gx-2 mt-7">
+            <div className="row d-flex h-100 gx-2 mt-7">
 
             {dealsData.map((dealItem) => (
                           

@@ -5,6 +5,8 @@ import MapMarkerIcon from '../../static/icons/map_marker.svg'
 import SearchIcon from '../../static/icons/search.svg'
 import UserIcon from '../../static/icons/user.svg'
 
+ import { Link} from 'react-router-dom'
+
 class Header extends React.Component {
   render() {
     return (
@@ -37,18 +39,21 @@ class Header extends React.Component {
             <div className="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
               <p className="mb-0 fw-bold text-lg-center">
                 Deliver to:{' '}
+                <Link to="/Private">
                 <img
                   className="mapMarkerIcon"
                   src={MapMarkerIcon}
                   alt="map Market Icon"
                 />
+                </Link>
+                
                 <span className="fw-normal">Current Location </span>
                 <span>Mirpur 1 Bus Stand, Dhaka</span>
               </p>
             </div>
             <form className="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
               <div className="input-group-icon pe-2 d-flex">
-                <img class="searchIcon" src={SearchIcon} alt="search icon" />
+                <img className="searchIcon" src={SearchIcon} alt="search icon" />
                 <input
                   className="form-control border-0 input-box bg-100"
                   type="search"
@@ -56,14 +61,15 @@ class Header extends React.Component {
                   aria-label="Search"
                 />
               </div>
+              <Link to="/Login">
               <button
                 className="btn btn-white shadow-warning text-warning"
-                type="submit"
-              >
+                type="submit">
                 {' '}
-                <img class="userIcon" src={UserIcon} alt="map marker icon" />
+                <img className="userIcon" src={UserIcon} alt="map marker icon" />
                 Login
               </button>
+              </Link>
             </form>
           </div>
         </div>
